@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 19800000}
   - component: {fileID: 114803918787428180}
   - component: {fileID: 19900000}
+  - component: {fileID: 58034678916437626}
   m_Layer: 0
   m_Name: TestParticles_LayeredGreen
-  m_TagString: Untagged
+  m_TagString: Attack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9127,6 +9128,21 @@ Prefab:
   m_SourcePrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100000}
   m_IsPrefabAsset: 1
+--- !u!58 &58034678916437626
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.3
 --- !u!114 &114803918787428180
 MonoBehaviour:
   m_ObjectHideFlags: 1
