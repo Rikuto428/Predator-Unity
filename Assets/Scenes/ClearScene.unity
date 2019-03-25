@@ -126,7 +126,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4026999035030612, guid: 72f772e6ee21474449df17bc8188c970, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -3
+      value: -2.35
       objectReference: {fileID: 0}
     - target: {fileID: 4026999035030612, guid: 72f772e6ee21474449df17bc8188c970, type: 2}
       propertyPath: m_LocalPosition.z
@@ -311,7 +311,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4026999035030612, guid: 72f772e6ee21474449df17bc8188c970, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 3
+      value: 2.4
       objectReference: {fileID: 0}
     - target: {fileID: 4026999035030612, guid: 72f772e6ee21474449df17bc8188c970, type: 2}
       propertyPath: m_LocalPosition.z
@@ -571,7 +571,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4026999035030612, guid: 72f772e6ee21474449df17bc8188c970, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 3
+      value: 2.4
       objectReference: {fileID: 0}
     - target: {fileID: 4026999035030612, guid: 72f772e6ee21474449df17bc8188c970, type: 2}
       propertyPath: m_LocalPosition.z
@@ -632,7 +632,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4026999035030612, guid: 72f772e6ee21474449df17bc8188c970, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 3
+      value: 2.4
       objectReference: {fileID: 0}
     - target: {fileID: 4026999035030612, guid: 72f772e6ee21474449df17bc8188c970, type: 2}
       propertyPath: m_LocalPosition.z
@@ -768,7 +768,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4026999035030612, guid: 72f772e6ee21474449df17bc8188c970, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -3
+      value: -2.35
       objectReference: {fileID: 0}
     - target: {fileID: 4026999035030612, guid: 72f772e6ee21474449df17bc8188c970, type: 2}
       propertyPath: m_LocalPosition.z
@@ -906,7 +906,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4026999035030612, guid: 72f772e6ee21474449df17bc8188c970, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -3
+      value: -2.35
       objectReference: {fileID: 0}
     - target: {fileID: 4026999035030612, guid: 72f772e6ee21474449df17bc8188c970, type: 2}
       propertyPath: m_LocalPosition.z
