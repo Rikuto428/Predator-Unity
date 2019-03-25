@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour {
         if (other.gameObject.tag == "Attack") {
             Destroy(gameObject);
             this.gameDirector.GetComponent<GameDirector>().died();
-            Debug.Log("死亡");
+            //Debug.Log("死亡");
         }
 
     }
@@ -48,7 +48,7 @@ public class PlayerController : MonoBehaviour {
         if (collision.gameObject.tag == "Enemy") {
             Destroy(gameObject);
             this.gameDirector.GetComponent<GameDirector>().died();
-            Debug.Log("死亡");
+            //Debug.Log("死亡");
         }
 
     }
