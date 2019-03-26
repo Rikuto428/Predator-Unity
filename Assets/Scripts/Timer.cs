@@ -7,6 +7,7 @@ public class Timer : MonoBehaviour {
 
     public GameObject score_object = null;
     float timer;
+    private bool diedTrigger = false;
 
     public static string time; 
     // getter
@@ -22,19 +23,30 @@ public class Timer : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        this.timer += Time.deltaTime;
-        time = this.timer.ToString("F2");
+        if (diedTrigger == false)
+        {
+            this.timer += Time.deltaTime;
+            time = this.timer.ToString("F2");
 
-        // オブジェクトからTextコンポーネントを取得
-        Text score_text = score_object.GetComponent<Text>();
-        // テキストの表示を入れ替える
-        score_text.text = time;
+            // オブジェクトからTextコンポーネントを取得
+            Text score_text = score_object.GetComponent<Text>();
+            // テキストの表示を入れ替える
+            score_text.text = time;
+
+        }
 
     }
 
     public void reset() {
 
         this.timer = 0.0f;
+
+    }
+
+    public void died()
+    {
+
+        diedTrigger = true;
 
     }
 

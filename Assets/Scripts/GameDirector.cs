@@ -46,6 +46,7 @@ public class GameDirector : MonoBehaviour {
         score_text.text = "Restart the touch screen";
         this.mainBgm.GetComponent<MainBGM>().stop();
         GetComponent<AudioSource>().Play();
+        GetComponent<Timer>().died();
         resetTrigger = true;
 
     }
