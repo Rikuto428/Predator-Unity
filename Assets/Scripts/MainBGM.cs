@@ -6,30 +6,23 @@ public class MainBGM : MonoBehaviour {
 
     public bool DontDestroyEnabled = true;
 
-    // Use this for initialization
     void Start () {
 
+        // メインBGM
         GetComponent<AudioSource>().Play();
 
-        if (DontDestroyEnabled)
-        {
-            // Sceneを遷移してもオブジェクトが消えないようにする
-            DontDestroyOnLoad(this);
-        }
+        // Sceneを遷移してもオブジェクトが消えないようにする（メインBGMが流れ続ける）
+        if (DontDestroyEnabled) DontDestroyOnLoad(this);
 
     }
 	
-	// Update is called once per frame
 	void Update () {
 		
 	}
 
-    public void stop()
-    {
-
+    public void stop() {
+        // オブジェクトの削除（メインBGMを止める）
         Destroy(gameObject);
-        //GetComponent<AudioSource>().Stop();
-
     }
 
 }

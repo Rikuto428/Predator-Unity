@@ -6,9 +6,9 @@ public class EnemyGenerator : MonoBehaviour {
 
     public GameObject enemy_oPrefab;
 
-    // Use this for initialization
     void Start () {
 
+        // ステージを6つに区分し、それぞれの区分に4匹ずつランダムに配置
         for (int i = 0; i < 6; i++) {
             for (int j = 0; j < 4; j++) {
                 GameObject go = Instantiate(enemy_oPrefab) as GameObject;
@@ -20,7 +20,6 @@ public class EnemyGenerator : MonoBehaviour {
 
     }
 	
-	// Update is called once per frame
 	void Update () {
 		
 	}

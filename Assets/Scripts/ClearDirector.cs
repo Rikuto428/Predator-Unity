@@ -7,42 +7,41 @@ using UnityEngine.SceneManagement;
 
 public class ClearDirector : MonoBehaviour {
 
-    public GameObject score_object = null;
     private string bestTime;
     // PlayerPrefsで保存するためのキー
     private string bestTimeKey = "bestTime";
 
-    GameObject mainBgm;
+    public GameObject score_object = null;
 
     // Timer.csからクリアタイムを取得
     string clearTime = Timer.getTime();
 
-    // Use this for initialization
+    GameObject mainBgm;
+
     void Start () {
 
+        this.mainBgm = GameObject.Find("MainBGM");
+
+        // クリアSE
         GetComponent<AudioSource>().Play();
 
         // ベストタイムの削除
         //PlayerPrefs.DeleteKey("bestTime");
-
         // ベストタイムの取得
         getTime();
-
         // オブジェクトからTextコンポーネントを取得
         Text score_text = score_object.GetComponent<Text>();
         // テキストの表示を入れ替える
         score_text.text = "Clear Time " + clearTime + "           Best Time  " + bestTime;
 
-        this.mainBgm = GameObject.Find("MainBGM");
-
     }
 	
-	// Update is called once per frame
 	void Update () {
 
         // 画面タッチでスタートシーンのロード
         if (Input.GetMouseButton(0)) {
             SceneManager.LoadScene("StartScene");
+            // メインBGMを止める
             this.mainBgm.GetComponent<MainBGM>().stop();
         }
 
@@ -50,7 +49,7 @@ public class ClearDirector : MonoBehaviour {
 
     // ベストタイムの取得
     public void getTime() {
-        // ベストタイムを取得する。保存されてなければ300秒を取得する。
+        // ベストタイムを取得する。保存されてなければ20秒を取得する。
         bestTime = PlayerPrefs.GetString(bestTimeKey, "20.00");
         // タイムがベストタイムより早ければ
         double num1 = double.Parse(bestTime);
@@ -62,7 +61,6 @@ public class ClearDirector : MonoBehaviour {
             // ベストタイムの保存
             save();
         }
-
     }
 
     // ベストタイムの保存
@@ -70,7 +68,6 @@ public class ClearDirector : MonoBehaviour {
         // ベストタイムを保存する
         PlayerPrefs.SetString(bestTimeKey, bestTime);
         PlayerPrefs.Save();
-
     }
 
 }

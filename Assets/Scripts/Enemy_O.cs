@@ -4,37 +4,33 @@ using UnityEngine;
 
 public class Enemy_O : MonoBehaviour {
 
-    Animator animator;
-
     public GameObject insideAttackPrefab;
 
-    // Use this for initialization
+    Animator animator;
+    
     void Start () {
 
         this.animator = GetComponent<Animator>();
 		
 	}
 	
-	// Update is called once per frame
 	void Update () {
 		
 	}
 
     public void idle() {
-
+        // 待機状態のアニメーション
         this.animator.SetTrigger("IdleTrigger");
-
     }
 
     public void attack() {
-
         float positionX = transform.position.x;
         float positionY = transform.position.y;
-
+        // 攻撃準備のアニメーション
         this.animator.SetTrigger("AttackTrigger");
+        // 攻撃範囲の予兆の表示
         GameObject go = Instantiate(insideAttackPrefab) as GameObject;
         go.transform.position = new Vector3(positionX, positionY, 0);
-
     }
 
 }

@@ -5,49 +5,46 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour {
 
-    public GameObject score_object = null;
-    float timer;
     private bool diedTrigger = false;
 
-    public static string time; 
-    // getter
+    public GameObject score_object = null;
+
+    float timer;
+
+    // ClearDirector.csにクリアタイムを渡す
+    public static string time;
     public static string getTime() {
         return time;
     }
 
-    // Use this for initialization
     void Start () {
 		
 	}
 	
-	// Update is called once per frame
 	void Update () {
 
-        if (diedTrigger == false)
-        {
+        // 経過時間
+        if (diedTrigger == false) {
+            // 小数点第2位まで取得
             this.timer += Time.deltaTime;
             time = this.timer.ToString("F2");
-
             // オブジェクトからTextコンポーネントを取得
             Text score_text = score_object.GetComponent<Text>();
             // テキストの表示を入れ替える
             score_text.text = time;
-
         }
 
     }
 
+    // タイマーのリセット
     public void reset() {
-
         this.timer = 0.0f;
-
     }
 
-    public void died()
-    {
-
+    // 死亡時
+    public void died() {
+        // タイマーのカウントを止める
         diedTrigger = true;
-
     }
 
 }
